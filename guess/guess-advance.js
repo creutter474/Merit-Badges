@@ -13,7 +13,10 @@ while (again == true){
 	var turns = 0;
 	while(guess != answer){
 		guess = prompt("Guess my number 1-100");
-		if (guess == "q")break;
+		if (guess == "q"){
+      alert("Quitter!")
+      break;
+    }
 		valid = validator(guess);
 		if (valid ==true){
 			turns++;
@@ -37,6 +40,25 @@ while (again == true){
 	 else{
 		 return false;
 	 }
+ }
+ 
+ function gameStats(){
+	 alert("you guessed it in "+turns+" turns");
+	 totalTurns += turns;
+	 var averageTurns = totalTurns / games;
+	 alert("You won the "+games+" games with an average of "+averageTurns+" turns");
+ }
+ 
+ function newGame(){
+	again = confirm("Do you want to stop playing? press cancel to stop");
+	if(again == false){
+		alert("Sorry to see you go");
+		return false;
+	}
+	else{
+		return true;
+	}
+}
  }
  
  function gameStats(){
