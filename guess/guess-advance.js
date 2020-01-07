@@ -61,20 +61,3 @@ while (again == true){
 }
  }
  
- function gameStats(){
-	 alert("you guessed it in "+turns+" turns");
-	 totalTurns += turns;
-	 var averageTurns = totalTurns / games;
-	 alert("You won the "+games+" games with an average of "+averageTurns+" turns");
- }
- 
- function newGame(){
-	again = confirm("Do you want to stop playing? press cancel to stop");
-	if(again == false){
-		alert("Sorry to see you go");
-		return false;
-	}
-	else{
-		return false;
-	}
-}
