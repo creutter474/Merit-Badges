@@ -59,5 +59,3 @@ while (again == true){
 		return true;
 	}
 }
- }
- 
